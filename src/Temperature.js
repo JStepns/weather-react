@@ -8,17 +8,17 @@ export default function Temperature() {
           30
         </div>
         <div className="col-6" id="temp-units">
-          <a href="#" id="celsius">
+          <a href="/" id="celsius">
             ℃
           </a>
-          <a href="#" id="fahrenheit">
+          <a href="/" id="fahrenheit">
             ℉
           </a>
         </div>
       </div>
       <div className="row" id="current-temp-icon">
         <div className="col-12">
-          <img src="../images/clear-sky.png" alt="clear sky" />
+          <img src = "./images/clear-sky.png" alt="clear sky" />
         </div>
       </div>
       <div className="row" id="min-max">
