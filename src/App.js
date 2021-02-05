@@ -3,6 +3,7 @@ import SearchForm from './SearchForm';
 import DateTime from './DateTime';
 import Temperature from './Temperature';
 import WeatherElements from './WeatherElements';
+import Forecast from './Forecast';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <DateTime />
       <Temperature />
       <WeatherElements />
+      <Forecast />
       </div>
       <footer>This project was coded by Jacqueline Stephens and is open-sourced on <a
         href="https://github.com/JStepns/weather-react" target="_blank" rel="noreferrer">GitHub</a> and hosted on Netlify.
