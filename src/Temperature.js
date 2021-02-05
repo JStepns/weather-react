@@ -1,4 +1,5 @@
 import './Temperature.css';
+import clearSky from './images/clearSky.png';
 
 export default function Temperature() {
   return (
@@ -18,7 +19,7 @@ export default function Temperature() {
       </div>
       <div className="row" id="current-temp-icon">
         <div className="col-12">
-          <img src = "./images/clear-sky.png" alt="clear sky" />
+          <img src = {clearSky} alt="clear sky" />
         </div>
       </div>
       <div className="row" id="min-max">
