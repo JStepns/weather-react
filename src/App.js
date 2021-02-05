@@ -10,8 +10,10 @@ export default function App() {
       <SearchForm />
       <DateTime />
       <Temperature />
-      <footer>This project was coded by Jacqueline Stephens and is open-sourced on <a href = "https://github.com/JStepns/weather-react" target = "_blank" rel = "noreferrer">GitHub</a> and hosted on Netlify.</footer>
       </div>
+      <footer>This project was coded by Jacqueline Stephens and is open-sourced on <a
+        href="https://github.com/JStepns/weather-react" target="_blank" rel="noreferrer">GitHub</a> and hosted on Netlify.
+    </footer>
     </div>
   );
 }
