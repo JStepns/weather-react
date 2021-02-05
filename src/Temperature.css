@@ -1,0 +1,46 @@
+#current-temp {
+  font-family: "Raleway", sans-serif;
+  padding: 10px 0;
+}
+#current-temp-value {
+  font-size: 30px;
+  position: relative;
+  left: 410px;
+}
+#temp-units .active {
+  color: black;
+  cursor: default;
+}
+#temp-units .active:hover {
+  text-decoration: none;
+}
+#celsius {
+  font-size: 20px;
+  position: relative;
+  right: 10px;
+}
+#fahrenheit {
+  font-size: 20px;
+  position: relative;
+  right: 30px;
+  top: 20px;
+}
+#current-temp-icon img {
+  margin: 0 auto;
+  display: block;
+  filter: contrast(200%);
+  max-width: 80px;
+}
+#min-max {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  padding: 15px 0 0 0;
+}
+#min-temp {
+  position: relative;
+  left: 350px;
+}
+#max-temp {
+  position: relative;
+  left: 20px;
+}
