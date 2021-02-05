@@ -23,12 +23,9 @@ form {
 #search-box {
   display: block;
   margin: 0 auto;
-  padding: 0px 30px 0px 0px;
+  padding: 0px 50px 0px 0px;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
-}
-#search-button {
-  font-family: "Quicksand", sans-serif;
 }
 .dropdown {
   display: inline-block;
