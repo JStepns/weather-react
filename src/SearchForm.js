@@ -4,7 +4,7 @@ import './SearchForm.css';
 
 export default function SearchForm(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
-  const [city, setCity] = useState(" ");
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
@@ -52,7 +52,7 @@ export default function SearchForm(props) {
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Ipswich, AU
+            {city}
           </button>
           <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
             <button className="dropdown-item" type="button">
@@ -80,44 +80,7 @@ export default function SearchForm(props) {
     );
 
   if (weatherData.ready) {
-  return (
-    <div className="SearchForm">
-      <form onSubmit={handleSubmit}>
-        <div className="dropdown">
-          <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenu2"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {city}
-          </button>
-          <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button className="dropdown-item" type="button">
-              <div className="row">
-                <div className="col-8">
-                  <input
-                    type="search"
-                    placeholder="🔍 Search your city"
-                    id="search-box"
-                    onChange={changeCity}
-                  />
-                </div>
-                <div className="col-4">
-                  <input type="submit" value="Search" id="search-button" />
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-        <button id="current-location-button">
-          <i className="fas fa-map-marker-alt"></i>
-        </button>
-      </form>
-    </div>
-  );   
+  return form;   
 } else {
   search();
   return form;

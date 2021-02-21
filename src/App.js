@@ -10,7 +10,7 @@ export default function App() {
     return (
     <div className="App">
       <div className = "Container">
-      <SearchForm />
+      <SearchForm defaultCity = "Ipswich, AU" />
       <DateTime />
       <Temperature />
       <WeatherElements />
