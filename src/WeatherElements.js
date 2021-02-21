@@ -1,3 +1,4 @@
+import React from 'react';
 import './WeatherElements.css';
 
 export default function WeatherElements() {

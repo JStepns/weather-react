@@ -1,3 +1,4 @@
+import React from 'react';
 import './Forecast.css';
 import clearSky from './images/clearSky.png';
 import cloudy from './images/cloudy.png';

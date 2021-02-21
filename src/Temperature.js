@@ -1,9 +1,10 @@
+import React from 'react';
 import './Temperature.css';
 import clearSky from './images/clearSky.png';
 
 export default function Temperature() {
-  return (
-    <div className="Temperature">
+  return(
+  <div className="Temperature">
       <div className="row" id="current-temp">
         <div className="col-6" id="current-temp-value">
           30
@@ -31,5 +32,5 @@ export default function Temperature() {
         </div>
       </div>
     </div>
-  );
+    );
 }
