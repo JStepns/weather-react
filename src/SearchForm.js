@@ -2,15 +2,20 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './SearchForm.css';
 
-export default function SearchForm() {
+export default function SearchForm(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(" ");
 
   function handleResponse(response) {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      temperature: response.data.main.temp,
+      dateTime: new Date(response.data.dt*1000),
+      temperature: Math.round(response.data.main.temp),
+      icon: response.data.weather[0].icon,
+      minTemp: Math.round(response.data.main.temp_min),
+      maxTemp: Math.round(response.data.main.temp_max),
+      pressure: response.data.main.pressure,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed
     });
@@ -23,10 +28,8 @@ export default function SearchForm() {
   }
 
   function handleSubmit(event){
-    let cityInput = document.querySelector("#search-box").value;
-    let cityHeading = document.querySelector("#dropdownMenu2").value;
     event.preventDefault();
-    if (cityInput.value){
+    if (city){
       search();
     } else {
       alert ("Please enter a city");
