@@ -88,10 +88,6 @@ export default function SearchForm(props) {
   );
 } else {
   search();
-  return form && ( 
-    <div>
-    <DateTime dateTime={weatherData.dateTime} />
-    </div>
-  );
+  return form;
 }
 }
