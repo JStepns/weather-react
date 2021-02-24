@@ -12,11 +12,20 @@ export default function DateTime(props) {
   let month = months[props.dateTime.getMonth()];
   let year = props.dateTime.getFullYear();
 
+  function getCurrentTime(){
+    let currentTime = new Date ();
+    let currentHour = ("0" + currentTime.getHours()).slice(-2);
+    let currentMinutes = ("0" + currentTime.getHours()).slice(-2);
+    setInterval(getCurrentTime, 60000);
+  }
+  
+  getCurrentTime();
+
   return (
     <div className="DateTime">
       <div className="row">
         <div className="col-12" id="current-time">
-          <h5> {hours}: {minutes} </h5>
+          <h5> {currentHour}: {currentMinutes} </h5>
         </div>
       </div>
       <div className="row">
@@ -26,7 +35,7 @@ export default function DateTime(props) {
       </div>
       <div className="row">
         <div className="col-12" id="last-updated-time">
-          <h5> Last updated: 13:46 </h5>
+          <h5> Last updated: {hours}:{minutes} </h5>
         </div>
       </div>
     </div>
