@@ -4,12 +4,14 @@ import SearchForm from './SearchForm';
 import Temperature from './Temperature';
 import WeatherElements from './WeatherElements';
 import Forecast from './Forecast';
+import Clock from './Clock';
 
 export default function App() {
     return (
     <div className="App">
       <div className = "Container">
       <SearchForm defaultCity = "Ipswich, AU" />
+      <Clock />
       <Temperature />
       <WeatherElements />
       <Forecast />

@@ -12,22 +12,8 @@ export default function DateTime(props) {
   let month = months[props.dateTime.getMonth()];
   let year = props.dateTime.getFullYear();
 
-  function getCurrentTime(){
-    let currentTime = new Date ();
-    let currentHour = ("0" + currentTime.getHours()).slice(-2);
-    let currentMinutes = ("0" + currentTime.getHours()).slice(-2);
-    setInterval(getCurrentTime, 60000);
-  }
-  
-  getCurrentTime();
-
   return (
     <div className="DateTime">
-      <div className="row">
-        <div className="col-12" id="current-time">
-          <h5> {currentHour}: {currentMinutes} </h5>
-        </div>
-      </div>
       <div className="row">
         <div className="col-12" id="current-date">
           <h5> {day} {date} {month} {year} </h5>

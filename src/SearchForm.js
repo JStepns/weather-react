@@ -81,13 +81,16 @@ export default function SearchForm(props) {
     );
 
   if (weatherData.ready) {
-  return form && ( 
-    <div>
-    <DateTime dateTime={weatherData.dateTime} />
-    </div>
-  );
+  return (
+      <div>
+        {form}
+        <div>
+          <DateTime dateTime={weatherData.dateTime} />
+        </div>
+      </div>
+    );
 } else {
   search();
-  return form;
+  return {form};
 }
 }
