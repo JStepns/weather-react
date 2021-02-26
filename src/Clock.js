@@ -1,26 +1,37 @@
-//import React from 'react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './Clock.css'
 
 export default function Clock (){
-    let [currentHour, getCurrentHour] = useState("");
-    let [currentMinutes, getCurrentMinutes] = useState("");
-    //const currentTime = new Date(),
-    //currentHour = currentTime.getHours(),
-    //currentMinutes = currentTime.getMinutes();
+  const [currentHour, getCurrentHour] = useState("0" + new Date().getHours());
+  const [currentMinutes, getCurrentMinutes] = useState("0" + new Date().getMinutes());
+  
+  useEffect(()=>{
+    const interval = setInterval(()=>{
+      getCurrentMinutes("0" + new Date().getMinutes())
+    },60000); 
 
-    const currentTime = new Date ();
-    getCurrentHour("0" + currentTime.getHours()).slice(-2);
-    getCurrentMinutes ("0" + currentTime.getMinutes()).slice(-2);
-    setInterval (getCurrentHour, 60000);
-    setInterval (getCurrentMinutes, 60000);
+    return () => clearInterval(interval)
+},[currentMinutes])
 
-    return (
-      <div className="Clock">
+ useEffect(()=>{
+    const interval = setInterval(()=>{
+      getCurrentHour("0" + new Date().getHours())
+    },60000); 
+
+    return () => clearInterval(interval)
+},[currentHour])
+
+  return (
+    <div className="Clock">
       <div className="row">
         <div className="col-12" id="current-time">
-          <h5> {currentHour}: {currentMinutes} </h5>
+          <h5>
+            <strong>Time: {" "}
+            {currentHour.slice(-2)}:{currentMinutes.slice(-2)}
+            </strong>
+          </h5>
         </div>
       </div>
-      </div>
-    );
+    </div>
+  );
 }
