@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import SearchForm from './SearchForm';
-import WeatherElements from './WeatherElements';
 import Forecast from './Forecast';
 
 export default function App() {
@@ -9,7 +8,6 @@ export default function App() {
     <div className="App">
       <div className = "Container">
       <SearchForm defaultCity = "Ipswich, AU" />
-      <WeatherElements />
       <Forecast />
       </div>
       <footer>This project was coded by Jacqueline Stephens and is open-sourced on <a
