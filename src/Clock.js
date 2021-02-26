@@ -27,7 +27,6 @@ export default function Clock (){
         <div className="col-12" id="current-time">
           <h5>
             <strong>
-            Time: {" "}
             {currentHour.slice(-2)}:{currentMinutes.slice(-2)}
             </strong>
           </h5>

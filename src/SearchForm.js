@@ -3,6 +3,7 @@ import axios from 'axios';
 import './SearchForm.css';
 import DateTime from './DateTime';
 import Clock from './Clock';
+import Temperature from './Temperature';
 
 export default function SearchForm(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
@@ -90,6 +91,9 @@ export default function SearchForm(props) {
         </div>
         <div>
           <DateTime dateTime={weatherData.dateTime} />
+        </div>
+        <div>
+          <Temperature data = {weatherData} />
         </div>
       </div>
     );
