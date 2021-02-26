@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './SearchForm.css';
 import DateTime from './DateTime';
+import Clock from './Clock';
 
 export default function SearchForm(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
@@ -85,12 +86,22 @@ export default function SearchForm(props) {
       <div>
         {form}
         <div>
+          <Clock />
+        </div>
+        <div>
           <DateTime dateTime={weatherData.dateTime} />
         </div>
       </div>
     );
 } else {
   search();
-  return form;
+  return (
+    <div>
+        {form}
+        <div>
+          <Clock />
+        </div>
+    </div>
+  );
 }
 }
