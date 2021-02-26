@@ -1,13 +1,8 @@
-#forecast {
+.Forecast {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   text-align: center;
-  padding: 10px 0 0 0;
 }
-#forecast h5 {
-  font-size: 18px;
-}
-#forecast img {
-  filter: contrast(200%);
-  width: 80px;
+.Forecast canvas {
+  display: block;
 }

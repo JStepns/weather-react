@@ -5,6 +5,7 @@ import DateTime from './DateTime';
 import Clock from './Clock';
 import Temperature from './Temperature';
 import WeatherElements from './WeatherElements';
+import Forecast from './Forecast';
 
 export default function SearchForm(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
@@ -98,6 +99,9 @@ export default function SearchForm(props) {
         </div>
         <div>
           <WeatherElements data = {weatherData} />
+        </div>
+        <div>
+          <Forecast city = {weatherData.city} />
         </div>
       </div>
     );
