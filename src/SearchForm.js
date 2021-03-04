@@ -11,6 +11,7 @@ import WeatherIcons from './WeatherIcons';
 export default function SearchForm(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
   const [city, setCity] = useState(props.defaultCity);
+  const apiKey = "56d850ac737202634200204105b3c8de";
 
   function handleResponse(response) {
     setWeatherData({
@@ -26,10 +27,10 @@ export default function SearchForm(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed
     });
+    setCity(response.data.name);
   }
 
   function search(){
-    const apiKey = "56d850ac737202634200204105b3c8de";
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -45,6 +46,19 @@ export default function SearchForm(props) {
 
   function changeCity(event){
     setCity(event.target.value);
+  }
+
+  function searchLocation(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function getCurrentLocation() {
+    navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
   let form = (
@@ -79,7 +93,7 @@ export default function SearchForm(props) {
             </button>
           </div>
         </div>
-        <button id="current-location-button">
+        <button id="current-location-button" onClick={getCurrentLocation}>
           <i className="fas fa-map-marker-alt"></i>
         </button>
       </form>

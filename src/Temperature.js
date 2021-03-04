@@ -4,7 +4,6 @@ import TemperatureUnits from './TemperatureUnits';
 import WeatherIcons from './WeatherIcons';
 
 export default function Temperature(props) {
-  const url =  `http://openweathermap.org/img/wn/`;
   return(
   <div className="Temperature">
       <TemperatureUnits celsius={props.data.temperature} />
