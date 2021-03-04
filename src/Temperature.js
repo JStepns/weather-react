@@ -1,6 +1,7 @@
 import React from 'react';
 import './Temperature.css';
 import TemperatureUnits from './TemperatureUnits';
+import WeatherIcons from './WeatherIcons';
 
 export default function Temperature(props) {
   const url =  `http://openweathermap.org/img/wn/`;
@@ -9,7 +10,7 @@ export default function Temperature(props) {
       <TemperatureUnits celsius={props.data.temperature} />
       <div className="row" id="current-temp-icon">
         <div className="col-12">
-          <img src = {`${url}${props.data.icon}.png`} alt={props.data.description} />
+          <WeatherIcons icon = {props.data.icon} description={props.data.description} />
         </div>
       </div>
       <div className="row" id="min-max">
