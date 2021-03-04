@@ -6,6 +6,7 @@ import Clock from './Clock';
 import Temperature from './Temperature';
 import WeatherElements from './WeatherElements';
 import Forecast from './Forecast';
+import WeatherIcons from './WeatherIcons';
 
 export default function SearchForm(props) {
   const [weatherData, setWeatherData] = useState({ready:false});
@@ -18,6 +19,7 @@ export default function SearchForm(props) {
       dateTime: new Date(response.data.dt*1000),
       temperature: Math.round(response.data.main.temp),
       icon: response.data.weather[0].icon,
+      description: response.data.weather[0].description,
       minTemp: Math.round(response.data.main.temp_min),
       maxTemp: Math.round(response.data.main.temp_max),
       pressure: response.data.main.pressure,
@@ -102,6 +104,9 @@ export default function SearchForm(props) {
         </div>
         <div>
           <Forecast city = {weatherData.city} />
+        </div>
+        <div>
+          <WeatherIcons data = {weatherData} /> 
         </div>
       </div>
     );

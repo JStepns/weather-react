@@ -1,3 +1,6 @@
+img {
+  filter: contrast(200%);
+}
 #current-temp {
   font-family: "Raleway", sans-serif;
   padding: 10px 0;

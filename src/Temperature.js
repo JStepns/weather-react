@@ -1,8 +1,8 @@
 import React from 'react';
 import './Temperature.css';
-import clearSky from './images/clearSky.png';
 
 export default function Temperature(props) {
+  const url =  `http://openweathermap.org/img/wn/`;
   return(
   <div className="Temperature">
       <div className="row" id="current-temp">
@@ -20,7 +20,7 @@ export default function Temperature(props) {
       </div>
       <div className="row" id="current-temp-icon">
         <div className="col-12">
-          <img src = {clearSky} alt="clear sky" />
+          <img src = {`${url}${props.data.icon}.png`} alt={props.data.description} />
         </div>
       </div>
       <div className="row" id="min-max">
