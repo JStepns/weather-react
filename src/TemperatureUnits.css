@@ -1,0 +1,20 @@
+#current-temp {
+  font-family: "Raleway", sans-serif;
+  padding: 10px 0;
+}
+#current-temp-value {
+  font-size: 30px;
+  position: relative;
+  left: 410px;
+}
+.celsius {
+  font-size: 20px;
+  position: relative;
+  right: 10px;
+}
+.fahrenheit {
+  font-size: 20px;
+  position: relative;
+  right: 30px;
+  top: 20px;
+}
