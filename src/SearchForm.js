@@ -57,7 +57,8 @@ export default function SearchForm(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  function getCurrentLocation() {
+  function getCurrentLocation(event) {
+    event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
