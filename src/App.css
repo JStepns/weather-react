@@ -1,5 +1,5 @@
 .App .Container {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 20%, #ebedee 50%);
   max-width: 900px;
   max-height: 700px;
   padding: 10px;
