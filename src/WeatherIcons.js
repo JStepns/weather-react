@@ -3,7 +3,8 @@ import './WeatherIcons.css'
 
 export default function WeatherIcons(props) {
   const url =  `http://openweathermap.org/img/wn/`;
-  return (
+  if (props.icon){
+    return (
     <div className = "WeatherIcons">
       <img 
       src = {`${url}${props.icon}.png`}
@@ -11,4 +12,7 @@ export default function WeatherIcons(props) {
       />
       </div>
   );
+  } else {
+    return null;
+  }
 }
