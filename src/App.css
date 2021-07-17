@@ -1,6 +1,6 @@
 .App .Container {
   background-image: linear-gradient(120deg, #fdfbfb 20%, #ebedee 50%);
-  max-width: 900px;
+  max-width: 850px;
   max-height: 700px;
   padding: 10px;
   border-radius: 20px;
@@ -8,7 +8,35 @@
   margin: 0 auto;
 }
 .App footer {
-  max-width: 900px;
+  max-width: 850px;
   display: block;
   margin: 0 auto;
+}
+@media (max-width: 576px) {
+  .App .Container {
+    max-width: 450px;
+    max-height: 700px;
+  }
+  .App footer {
+    max-width: 450px;
+  }
+}
+@media (max-width: 768px) {
+  .App .Container {
+    max-width: 550px;
+    max-height: 800px;
+  }
+  .App footer {
+    max-width: 550px;
+  }
+}
+@media (max-width: 992px) {
+  .App .Container {
+    max-width: 650px;
+    max-height: 900px;
+  }
+  .App footer {
+    max-width: 650px;
+    color: #ebedee;
+  }
 }
