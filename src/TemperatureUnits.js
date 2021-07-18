@@ -25,7 +25,7 @@ export default function TemperatureUnits(props){
             </div>
             <div className="col-6" id="unit">
                 <span className = "celsius">
-                    ℃
+                    ℃| 
                 </span>
                 <a href="/" className = "fahrenheit" onClick={displayFahrenheit}>
                     ℉
@@ -44,7 +44,7 @@ export default function TemperatureUnits(props){
                         ℃
                     </a>
                     <span className = "fahrenheit">
-                        ℉
+                        |℉
                     </span>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 #current-temp-icon img {
   margin: 0 auto;
   display: block;
+  padding: 0;
 }
 #min-max {
   font-family: "Raleway", sans-serif;
@@ -8,10 +9,10 @@
   padding: 15px 0 0 0;
 }
 #min-temp {
-  position: relative;
-  left: 350px;
+  text-align: right;
 }
-#max-temp {
-  position: relative;
-  left: 20px;
+@media (max-width: 576px) {
+  #min-max {
+    font-size: 15px;
+  }
 }

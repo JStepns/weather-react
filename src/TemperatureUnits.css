@@ -1,20 +1,17 @@
-#current-temp {
+#current-temp-value {
   font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  text-align: right;
   padding: 10px 0;
 }
-#current-temp-value {
+#unit {
+  font-family: "Raleway", sans-serif;
   font-size: 30px;
-  position: relative;
-  left: 410px;
+  padding: 10px 0;
 }
-.celsius {
-  font-size: 20px;
-  position: relative;
-  right: 10px;
-}
-.fahrenheit {
-  font-size: 20px;
-  position: relative;
-  right: 30px;
-  top: 20px;
+@media (max-width: 576px) {
+  #current-temp-value,
+  #unit {
+    font-size: 20px;
+  }
 }
