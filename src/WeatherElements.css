@@ -6,8 +6,8 @@
 }
 @media (max-width: 576px) {
   #weather-elements {
-    padding: 25px 0;
-    font-size: 13px;
+    padding: 20px 0;
+    font-size: 14px;
   }
   #humidity,
   #wind {

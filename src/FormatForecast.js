@@ -1,4 +1,5 @@
 import React from 'react';
+import "./FormatForecast.css";
 import WeatherIcons from './WeatherIcons';
 
 export default function FormatForecast(props) {
@@ -22,17 +23,17 @@ export default function FormatForecast(props) {
   }
 
   return (
-    <div className="forecast-3hr col">
-        <div className="forecast-time">
-          <h5>{hours()}</h5>
-          <WeatherIcons icon = {props.data.weather[0].icon} description = {props.data.weather[0].description} />
-          <div className="forecast-temp">
-            <strong>
-            {getMaxTemp()}{" "}
-            </strong>
-            {getMinTemp()}
-          </div>
-        </div>
+    <div className="forecast-3hr">
+      <div className="forecast-time">
+        {hours()}
+      </div>
+      <WeatherIcons icon = {props.data.weather[0].icon} description = {props.data.weather[0].description} />
+      <div className="forecast-temp">
+        {getMinTemp()}{" "}
+        <strong>
+          {getMaxTemp()}
+        </strong>
+      </div>
     </div>
   );
 }

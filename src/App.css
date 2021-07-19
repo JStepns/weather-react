@@ -11,6 +11,13 @@
   max-width: 850px;
   display: block;
   margin: 0 auto;
+  color: #7d6da8;
+  font-weight: 600;
+  text-shadow: 0.5px 0.25px white;
+}
+.App footer a {
+  color: #d17840;
+  font-weight: 700;
 }
 @media (max-width: 576px) {
   .App .Container {
@@ -19,6 +26,7 @@
   }
   .App footer {
     max-width: 450px;
+    font-size: 15px;
   }
 }
 @media (max-width: 768px) {
@@ -28,6 +36,7 @@
   }
   .App footer {
     max-width: 550px;
+    text-shadow: none;
   }
 }
 @media (max-width: 992px) {
@@ -37,6 +46,5 @@
   }
   .App footer {
     max-width: 650px;
-    color: #ebedee;
   }
 }

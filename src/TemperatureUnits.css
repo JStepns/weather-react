@@ -9,6 +9,9 @@
   font-size: 30px;
   padding: 10px 0;
 }
+#unit a {
+  color: #d17840;
+}
 @media (max-width: 576px) {
   #current-temp-value,
   #unit {

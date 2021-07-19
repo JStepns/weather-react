@@ -17,7 +17,8 @@ export default function Temperature(props) {
           Min: {props.data.minTemp}°
         </div>
         <div className="col-6" id="max-temp">
-          Max: {props.data.maxTemp}°
+          Max: 
+          <strong>{" "}{props.data.maxTemp}°</strong>
         </div>
       </div>
     </div>

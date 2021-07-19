@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Forecast.css';
 import FormatForecast from './FormatForecast';
 
 export default function Forecast(props) {
@@ -15,12 +14,12 @@ export default function Forecast(props) {
   if (loaded && props.city === forecast.city.name){
     return (
     <div className = "forecast row">
-        <FormatForecast data={forecast.list[0]} />
-        <FormatForecast data={forecast.list[1]} />
-        <FormatForecast data={forecast.list[2]} />
-        <FormatForecast data={forecast.list[3]} />
-        <FormatForecast data={forecast.list[4]} />
-        <FormatForecast data={forecast.list[5]} />
+        <div className = "col-sm-4 col-md-4 col-lg-2"><FormatForecast data={forecast.list[0]} /></div>
+        <div className = "col-sm-4 col-md-4 col-lg-2"><FormatForecast data={forecast.list[1]} /></div>
+        <div className = "col-sm-4 col-md-4 col-lg-2"><FormatForecast data={forecast.list[2]} /></div>
+        <div className = "col-sm-4 col-md-4 col-lg-2 d-none d-sm-block"><FormatForecast data={forecast.list[3]} /></div>
+        <div className = "col-sm-4 col-md-4 col-lg-2 d-none d-sm-block"><FormatForecast data={forecast.list[4]} /></div>
+        <div className = "col-sm-4 col-md-4 col-lg-2 d-none d-sm-block"><FormatForecast data={forecast.list[5]} /></div> 
     </div>
     );
   } else {

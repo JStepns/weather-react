@@ -1,5 +1,5 @@
 .WeatherIcons img {
-  filter: sepia(45%);
+  filter: sepia(20%);
   height: auto;
   width: 80px;
 }

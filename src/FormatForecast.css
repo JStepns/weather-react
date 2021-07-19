@@ -1,0 +1,14 @@
+.forecast-3hr {
+  text-align: center;
+  padding: 15px 0;
+}
+.forecast-time {
+  color: #7d6da8;
+  font-weight: 500;
+}
+@media (max-width: 576px) {
+  .forecast-3hr {
+    font-size: 15px;
+    padding: 8px 0;
+  }
+}
